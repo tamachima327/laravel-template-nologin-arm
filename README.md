@@ -1,35 +1,23 @@
 # アプリケーション名(ログイン機能なし)
 
-## 準備手順の前に確認すること(この手順はアプリ完成時には README から削除する)
-
--   Docker Desktop で全コンテナを停止させる  
-    コンテナが複数起動するとポートがバッティング起こしてエラーするので全部止めてからやる
-
--   Docker Desktop で不要なリソースを定期的に削除する  
-    ストレージを圧迫するので、Containers/Images/Volumes あたりは定期的に掃除する  
-    docker compose up コマンドしたら全部再生成されるので分からなかったら全削除
-
--   Ubuntu または mac 内の勉強データで不要なものは定期的に削除する  
-    git clone で色々作ってもらってるので作業ディレクトリにたくさんファイルやフォルダがあると思うので  
-    不要だと判断できるアプリデータは削除する  
-    `rm ファイル名`もしくは`rm -r ディレクトリ名`で削除する  
-    ※間違えて大事なファイルを削除しないようにだけ気をつけてください...  
-    ※怖かったらこれはやらなくて OK
-
 -   このリポジトリは arm 版です(AppleSilicon の Mac 向け)  
 
-## Git リポジトリの準備手順(この手順はアプリ完成時には README から削除する)
+## 準備手順(この手順はアプリ完成時には README から削除する)
+
+-   Docker Desktop で全コンテナを停止させる
 
 -   リモートリポジトリの作成  
-    GitHub でリモートリポジトリを作成する(Add a README file のチェックは外す)  
-    リポジトリ名は作るアプリケーションに合わせる  
-    このリポジトリは下記説明で出てくる{上で作成したリモートリポジトリ}の事になる
+    GitHub でリモートリポジトリを作成  
+    自由にリポジトリ名を入力したら他の設定は変更せずに作成ボタンを押す  
+    作成したら下記を控える  
+    新しいリポジトリの SSH => 上で作成した SSH アドレス  
+    新しいリポジトリの名前 => 上で自由に入力したリポジトリ名
 
--   カレントディレクトリを変更する  
-    コマンドラインで現在いるディレクトリを作業ディレクトリに移動してから行う  
-    ※こだわりが無ければ coachtech ディレクトリに移動してから下記コマンドを行う
+-   コマンドライン(Ubuntu or Terminal)を開く
 
--   2 つのリポジトリをクローンしてファイル移動する
+-   カレントディレクトリ(現在のディレクトリ)を coachtech に移動する
+
+-   以下のコマンドを実行する
 
 ```
 git clone git@github.com:tamachima327/laravel-template-nologin-arm.git
@@ -40,11 +28,11 @@ yes | rm -r laravel-template-nologin-arm/.git
 ```
 
 ```
-git clone 上で作成したリモートリポジトリのSSHアドレス(Codeからコピー)
+git clone 新しいリポジトリのSSH
 ```
 
 ```
-mv laravel-template-nologin-arm/* laravel-template-nologin-arm/.[^\.]* 上で作成したリモートリポジトリ名
+mv laravel-template-nologin-arm/* laravel-template-nologin-arm/.[^\.]* 新しいリポジトリの名前
 ```
 
 ```
@@ -52,7 +40,7 @@ rm -r laravel-template-nologin-arm
 ```
 
 ```
-cd 上で作成したリモートリポジトリ名
+cd 新しいリポジトリの名前
 ```
 
 ```
