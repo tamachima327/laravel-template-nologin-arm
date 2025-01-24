@@ -17,8 +17,6 @@
     ※怖かったらこれはやらなくて OK
 
 -   このリポジトリは arm 版です(AppleSilicon の Mac 向け)  
-    amd 版はこちら  
-    https://github.com/tamachima327/laravel-template-nologin
 
 ## Git リポジトリの準備手順(この手順はアプリ完成時には README から削除する)
 
